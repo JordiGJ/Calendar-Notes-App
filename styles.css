@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: rgb(211, 211, 214);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+  padding: 1rem;
+}
+h1 {
+  margin: 2rem 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.month-container {
+  box-shadow: 2px 3px 12px #b2b2b2;
+  text-align: center;
+  min-width: 260px;
+  max-width: 385px;
+  padding: 0.6rem;
+  border-radius: 5px;
+  background-color: #111;
+  color: #eee;
+  position: relative;
+  font-size: 1.5rem;
+}
+.chevron {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+.chevron:hover {
+  background-color: rgb(222, 133, 1);
+}
+#prevChevron {
+  left: 15px;
+  top: 40px;
+}
+#nextChevron {
+  right: 15px;
+  top: 40px;
+}
+.month-name-container {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+.day-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.day-name {
+  margin: 0.6rem 0 0.25rem 0;
+  color: rgb(222, 133, 1);
+}
+.day {
+  margin: 0.125rem;
+  padding: 0.2rem;
+  border-radius: 2.5px;
+}
+.note {
+  border-radius: 2.5px;
+  padding: 0.1rem 0;
+  word-wrap: break-word;
+  max-width: 250px;
+}
+
+.first-note-container {
+  margin-top: 0.3rem;
+  border: solid 1px rgb(222, 133, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+
+.first-note-container input {
+  font-size: 1rem;
+}
+.note-container {
+  margin-top: 0.3rem;
+}
+.note-container2 {
+  margin-top: 0.3rem;
+  border: solid 1px rgb(222, 133, 1);
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  justify-content: space-between;
+  word-wrap: break-word;
+}
+.note-container p {
+  text-align: left;
+}
+.add-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+input {
+  font-family: inherit;
+  background-color: #111;
+  color: #fff;
+  outline: none;
+  border: none;
+  height: 28px;
+  font-size: 1.3rem;
+}
+
+/* style and performance classes */
+
+.numbered {
+  cursor: pointer;
+}
+.current-day {
+  background-color: rgb(222, 133, 1);
+}
+.black {
+  color: #111;
+}
+.hidden {
+  display: none;
+}
+.day-with-note {
+  text-decoration: underline;
+}
+
+@media (width <= 335px) {
+  .month-container {
+    font-size: unset;
+  }
+  .first-note-container img {
+    margin-right: 7.5px;
+  }
+  .first-note-container input {
+    padding-left: 0.6rem;
+  }
+}
